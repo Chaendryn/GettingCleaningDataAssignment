@@ -47,7 +47,7 @@ This script requires the **`sqldf`** package. Please ensure that it is installed
 
 1. The script downloads the dataset zip file and unzips it to a folder called 'UCI HAR Dataset` with a helper
    function called downloadUnzip.  It is a 59.7 MB zip file.  
-2. If you are would prefer to manually download the file and unzip it to the appropriate directory,  
+2. If you would prefer to manually download the file and unzip it to the appropriate directory,  
    disable the helper function call in the `run_analysis` main function by prepending `##` in front of the
    `downloadUnzip()` on line 5 of the script file.  
 3. You can download the dataset from 
@@ -68,7 +68,7 @@ This script requires the **`sqldf`** package. Please ensure that it is installed
    the resultant tidy data to a TAB delimited tidy.txt file in the working directory with the 
    `write.table()` command. The data can be read back into R with the `read.table("tidydata.txt", header=TRUE)` command.
 2. Helper functions (see comments in the code for more detailed descriptions of each function.)
-   * `downloadUnzip()` - function to create the directory if it does not exist, download the dataset and unzip it in the 
+   * `downloadUnzip()` - Function to create the directory if it does not exist, download the dataset and unzip it in the 
      right directory.
    * `dataMerge()` - Function to read in the data from the files and merge them into a complete dataset for analysis.
    * `loadColNames()`  - Function to read in the measurement description names contained in the features file and make 
