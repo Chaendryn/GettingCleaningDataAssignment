@@ -8,9 +8,13 @@ Yolande Korsten
 
 This analysis uses the dataset provided by Jorge L. Reyes-Ortiz, Davide Anguita, 
 Alessandro Ghio, Luca Oneto from Smartlab - Non Linear Complex Systems Laboratory
+
 DITEN - Università degli Studi di Genova.
+
 Via Opera Pia 11A, I-16145, Genoa, Italy.
+
 activityrecognition@smartlab.ws
+
 www.smartlab.ws
 
 
@@ -49,7 +53,6 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 ## Script Overview:
 
 
-
 1. Main function - `run_analysis()`
  
    Main function to calculate the means of the measurements by activity type and subject.  Writes
@@ -74,7 +77,7 @@ data files:
 * The source test data and training data have been run through the same filters and therefore requires 
   no additional manipulation prior to analysis to remove bias.  
 
-
+  
 ## Data Processing Done:
 
 
@@ -101,7 +104,18 @@ The following steps were done post analysis prior to writing it to a tab delimit
 ## Notes:
 
 
-1. The final tidy.txt file can be read into R with the `read.table()` function for further exploration and
-   analysis
-2. Script was last edited and executed on 21 June 2014, 03:10 SAST
-3. Script written and executed Windows 7 Professional 64x system with R Studio v. 0.98.501 and R x64 v. 3.1.0
+1. Why is this a tidy dataset?
+	* All column headings have non-alphanumeric characters and spaces removed to avoid potential issues 
+	  when importing the dataset into another non-R program such as Excel or into a database such as MySQL.
+	* Each record/row contains the average calculation of one combination of Subject ID and activity, which 
+	  enhances ease of use when exploring specific variables by further filtering. For example: comparing the
+	  statistics of all subjects performing the same activity across all measurement variables.
+	* While there is an ongoing debate around which is the better option - wide vs narrow datasets - most non-R
+	  users that have not been exposed to the tidy dataset debate are familiar with wide datasets through exposure
+	  to databases and Excel.
+	* See this discussion on https://class.coursera.org/getdata-004/forum/search?q=wide+vs+narrow#11-state-query=wide+vs+narrow
+	  for an in depth discussion as to why both wide and narrow datasets can be used.
+2. The final tidy.txt file can be read into R with the `read.table()` function for further exploration and
+   analysis.
+3. Script was last edited and executed on 21 June 2014, 03:10 SAST
+4. Script written and executed Windows 7 Professional 64x system with R Studio v. 0.98.501 and R x64 v. 3.1.0
