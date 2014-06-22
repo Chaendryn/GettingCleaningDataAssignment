@@ -35,6 +35,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 2. Unzip the files into your project directory.  You will have a folder called `UCI HAR Dataset` 
    containing all the data files needed to run the analysis.
 3. Download the `run_analysis.R` script file from https://github.com/Chaendryn/GettingCleaningDataAssignment
+   
    Save this to your project directory, but ensure that it is one level up from the `UCI HAR Dataset` folder
 4. Set your R working directory to your project directory using the `setwd()` command
 5. This script requires the **`sqldf`** package. Please ensure that it is installed in your R environment.
