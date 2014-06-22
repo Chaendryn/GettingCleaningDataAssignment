@@ -50,17 +50,21 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 
 
-1. Main function - `run_analysis()` 
+1. Main function - `run_analysis()`
+ 
    Main function to calculate the means of the measurements by activity type and subject.  Writes
    the resultant tidy data to a TAB delimited tidy.txt file in the working directory with the 
    `write.table()` command. The data can be read back into R with the `read.table()` command.
 2. Helper functions (see comments in the code for more detailed descriptions of each function.)
    * `dataMerge()` 
+   
 	 Function to read in the data from the files and merge them into a complete dataset for analysis.
    * `loadColNames()` 
+   
      Function to read in the measurement description names contained in the features file and make 
 	 them available to other functions.
    * `tidyColNames()` 
+   
      Function to clean up the column names of the dataset after analysis has been done.
 
 
@@ -81,6 +85,7 @@ data files:
 
 
 The following steps were followed to prepare the complete dataset for analysis.
+
 1. Read into R and merge the x_test and x_train data - measurement data
 2. Read into R and merge the y_test and y_train data - activity identifier data
 3. Read into R and merge the subject_test and subject_train data - subject identifier for each measurement 
