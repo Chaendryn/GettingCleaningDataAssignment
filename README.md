@@ -37,7 +37,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 3. Download the `run_analysis.R` script file from https://github.com/Chaendryn/GettingCleaningDataAssignment
    Save this to your project directory, but ensure that it is one level up from the `UCI HAR Dataset` folder
 4. Set your R working directory to your project directory using the `setwd()` command
-5. This script requires the *`sqldf`* package. Please ensure that it is installed in your R environment.
+5. This script requires the **`sqldf`** package. Please ensure that it is installed in your R environment.
    The `sqldf` package has dependencies on the following packages
    * `gsubfin`
    * `proto`
@@ -93,9 +93,9 @@ The following steps were followed to prepare the complete dataset for analysis.
 4. Read into R and merge the features.txt file data to add descriptive variable column names to the dataset.
 5. Subset the data on all column names containing either 'std' or 'mean' in the variable column name, but
    excluding MeanFreq and GravityMean.
-   
 
- The following steps were done post analysis prior to writing it to a tab delimited text file:
+
+The following steps were done post analysis prior to writing it to a tab delimited text file:
  1. Grouping of the aggregated data by Subject ID and Activity.
  2. Renaming the records with an Activity name based on the activity identifier.
  3. Removing the "Group by" columns from the final dataset.
