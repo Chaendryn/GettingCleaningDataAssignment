@@ -1,6 +1,9 @@
 ## Main function to calculate the means of the measurements by activity type and subject 
 
 run_analysis <- function() {
+      ## Calls the downloadUnzip helper function to download and unzip the data files in the correct directory
+      downloadUnzip()
+      
       ## Calls the loadColNames helper function to to create the column names of the dataset
       varNames <- loadColNames() 
       
@@ -40,6 +43,22 @@ run_analysis <- function() {
       ## Writes the tidy dataset to a tab delimited text file
       write.table(tidy, "./tidydata.txt", sep="\t", row.names = FALSE)
 }
+
+## Helper function to create the directory if it does not exist, download the dataset and unzip it in the right directory
+downloadUnzip <- function() {
+      ## checks to see whether the data directory exists and creates it if it doesn't
+      if(!file.exists("./UCI HAR Dataset")) {
+            dir.create("./UCI HAR Dataset")
+      }
+      
+      ## sets the URL for the file download and downloads the file
+      fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+      download.file(fileURL, destfile="./data.zip")
+      
+      ## Unzips the file to the UCI HAR Dataset directory
+      unzip("data.zip", exdir=".")
+}
+
 
 ## Helper function to read in the data from the files provided and merge them into a complete dataset for analysis
 dataMerge <- function(varNames) {

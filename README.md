@@ -30,24 +30,33 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 * run_analysis.R - the script file that reads the file data into a dataset, 
   performs the data analysis and outputs a tidy dataset of the analysis results
 
+
+## Required packages:
   
-## Getting the Data & Analysis Project Setup:
-
-
-1. Download the dataset from 
-   https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-2. Unzip the files into your project directory.  You will have a folder called `UCI HAR Dataset` 
-   containing all the data files needed to run the analysis.
-3. Download the `run_analysis.R` file from https://github.com/Chaendryn/GettingCleaningDataAssignment - Save 
-   this to your project directory, but ensure that it is one level up from the `UCI HAR Dataset` folder
-4. Set your R working directory to your project directory using the `setwd()` command
-5. This script requires the **`sqldf`** package. Please ensure that it is installed in your R environment.
+This script requires the **`sqldf`** package. Please ensure that it is installed in your R environment.
    The `sqldf` package has dependencies on the following packages
    * `gsubfin`
    * `proto`
    * `RSQLite`
    * `DBI`
    * `RSQLite.extfuns`
+  
+  
+## Getting the Data & Analysis Project Setup:
+
+
+1. The script downloads the dataset zip file and unzips it to a folder called 'UCI HAR Dataset` with a helper
+   function called downloadUnzip.  It is a 59.7 MB zip file.  
+2. If you are would prefer to manually download the file and unzip it to the appropriate directory,  
+   disable the helper function call in the `run_analysis` main function by prepending `##` in front of the
+   `downloadUnzip()` on line 5 of the script file.  
+3. You can download the dataset from 
+   https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+4. Unzip the files into your project directory.  You will have a folder called `UCI HAR Dataset` 
+   containing all the data files needed to run the analysis.
+5. Download the `run_analysis.R` file from https://github.com/Chaendryn/GettingCleaningDataAssignment - Save 
+   this to your project directory, but ensure that it is one level up from the `UCI HAR Dataset` folder
+6. Set your R working directory to your project directory using the `setwd()` command
 
 
 ## Script Overview:
@@ -59,6 +68,8 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
    the resultant tidy data to a TAB delimited tidy.txt file in the working directory with the 
    `write.table()` command. The data can be read back into R with the `read.table("tidydata.txt", header=TRUE)` command.
 2. Helper functions (see comments in the code for more detailed descriptions of each function.)
+   * `downloadUnzip()` - function to create the directory if it does not exist, download the dataset and unzip it in the 
+     right directory.
    * `dataMerge()` - Function to read in the data from the files and merge them into a complete dataset for analysis.
    * `loadColNames()`  - Function to read in the measurement description names contained in the features file and make 
 	 them available to other functions.
