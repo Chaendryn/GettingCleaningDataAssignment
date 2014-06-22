@@ -1,5 +1,5 @@
 # Analysis of Human Activity Recognition Using Smartphone Dataset
-# Version 1.0
+###Version 1.0
 
 Yolande Korsten
 
