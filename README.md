@@ -113,9 +113,9 @@ The following steps were done post analysis prior to writing it to a tab delimit
 	* While there is an ongoing debate around which is the better option - wide vs narrow datasets - most non-R
 	  users that have not been exposed to the tidy dataset debate are familiar with wide datasets through exposure
 	  to databases and Excel.
-	* See this discussion on https://class.coursera.org/getdata-004/forum/search?q=wide+vs+narrow#11-state-query=wide+vs+narrow
+	* See https://class.coursera.org/getdata-004/forum/search?q=wide+vs+narrow#11-state-query=wide+vs+narrow
 	  for an in depth discussion as to why both wide and narrow datasets can be used.
-2. The final tidy.txt file can be read into R with the `read.table()` function for further exploration and
+2. The final tidydata.txt file can be read into R with the `read.table("tidydata.txt", header=TRUE)` function for further exploration and
    analysis.
 3. Script was last edited and executed on 21 June 2014, 03:10 SAST
 4. Script written and executed Windows 7 Professional 64x system with R Studio v. 0.98.501 and R x64 v. 3.1.0
