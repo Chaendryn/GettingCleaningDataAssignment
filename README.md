@@ -34,9 +34,8 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
    https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 2. Unzip the files into your project directory.  You will have a folder called `UCI HAR Dataset` 
    containing all the data files needed to run the analysis.
-3. Download the `run_analysis.R` script file from https://github.com/Chaendryn/GettingCleaningDataAssignment
-   
-   Save this to your project directory, but ensure that it is one level up from the `UCI HAR Dataset` folder
+3. Download the `run_analysis.R` file from https://github.com/Chaendryn/GettingCleaningDataAssignment - Save 
+   this to your project directory, but ensure that it is one level up from the `UCI HAR Dataset` folder
 4. Set your R working directory to your project directory using the `setwd()` command
 5. This script requires the **`sqldf`** package. Please ensure that it is installed in your R environment.
    The `sqldf` package has dependencies on the following packages
@@ -57,16 +56,10 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
    the resultant tidy data to a TAB delimited tidy.txt file in the working directory with the 
    `write.table()` command. The data can be read back into R with the `read.table()` command.
 2. Helper functions (see comments in the code for more detailed descriptions of each function.)
-   * `dataMerge()` 
-   
-	 Function to read in the data from the files and merge them into a complete dataset for analysis.
-   * `loadColNames()` 
-   
-     Function to read in the measurement description names contained in the features file and make 
+   * `dataMerge()` - Function to read in the data from the files and merge them into a complete dataset for analysis.
+   * `loadColNames()`  - Function to read in the measurement description names contained in the features file and make 
 	 them available to other functions.
-   * `tidyColNames()` 
-   
-     Function to clean up the column names of the dataset after analysis has been done.
+   * `tidyColNames()` - Function to clean up the column names of the dataset after analysis has been done.
 
 
 ## Assumptions:
