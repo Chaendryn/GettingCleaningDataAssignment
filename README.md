@@ -1,11 +1,11 @@
 # Analysis of Human Activity Recognition Using Smartphone Dataset
 # Version 1.0
-   ====================
+
 Yolande Korsten
 
 
 ## Dataset and origin
-   ====================
+
 This analysis uses the dataset provided by Jorge L. Reyes-Ortiz, Davide Anguita, 
 Alessandro Ghio, Luca Oneto from Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova.
@@ -20,7 +20,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 
 ## This dataset includes the following files:
-   ====================
+
 * ReadMe.md - the document you're reading now
 * CodeBook.md - a description of the variables used from the source dataset
 * run_analysis.R - the script file that reads the file data into a dataset, 
@@ -28,7 +28,6 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
   
 ## Getting the Data & Analysis Project Setup:
-   ====================
 
 
 1. Download the dataset from 
@@ -48,7 +47,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 
 ## Script Overview:
-   ====================
+
 
 
 1. Main function - `run_analysis()` 
@@ -66,7 +65,6 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 
 ## Assumptions:
-   ====================
 
 
 The following assumptions have been made regarding the source data, based on visual inspection of the
@@ -80,7 +78,6 @@ data files:
 
 
 ## Data Processing Done:
-   ====================
 
 
 The following steps were followed to prepare the complete dataset for analysis.
@@ -103,7 +100,6 @@ The following steps were followed to prepare the complete dataset for analysis.
 
 
 ## Notes:
-## =============================================================== 
 
 
 1. The final tidy.txt file can be read into R with the `read.table()` function for further exploration and
