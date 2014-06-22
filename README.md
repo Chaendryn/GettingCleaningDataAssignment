@@ -57,7 +57,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
  
    Main function to calculate the means of the measurements by activity type and subject.  Writes
    the resultant tidy data to a TAB delimited tidy.txt file in the working directory with the 
-   `write.table()` command. The data can be read back into R with the `read.table()` command.
+   `write.table()` command. The data can be read back into R with the `read.table("tidydata.txt", header=TRUE)` command.
 2. Helper functions (see comments in the code for more detailed descriptions of each function.)
    * `dataMerge()` - Function to read in the data from the files and merge them into a complete dataset for analysis.
    * `loadColNames()`  - Function to read in the measurement description names contained in the features file and make 
